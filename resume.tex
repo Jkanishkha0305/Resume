@@ -1,0 +1,401 @@
+%-------------------------
+% Resume in Latex
+% Author : J.Kanishkha
+% License : MIT
+%------------------------
+
+%--- Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+%\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Set the margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+% Set the margins
+\geometry{left=0.85cm, top=0.8cm, right=0.85cm, bottom=0.2cm}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{\vspace{-2pt}}
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProject}[2]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #2}} \vspace{-0.5mm}\\ 
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\resumeLeadership}[3]{
+  \item
+      \textbf{#1}\\#2 \\
+      \textit{\small#3}\\
+
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+
+\newcommand{\name}{Kanishkha Jaisankar}
+\newcommand{\course}{B.E. -Computer Science and Engineering}
+\newcommand{\phone}{56 196 4863}
+\newcommand{\emaila}{f20190072@dubai.bits-pilani.ac.in}
+\newcommand{\github}{jkanishkha0305}
+\newcommand{\website}{jkanishkha0305.github.io}
+\newcommand{\linkedin}{jkanishkha}
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+
+%----------HEADING-----------------
+\begin{center}
+    \LARGE{\textbf{\name}}
+\end{center}
+\vspace{-4mm}
+\begin{center}
+    \small{\href{https://github.com/\github}{\faGithub \hspace{0.2mm} \github} |  \href{https://www.linkedin.com/in/\linkedin/}{\faLinkedinSquare \hspace{0.2mm} \linkedin} | 
+    \href{https://jkanishkha0305.github.io/Personal_Website/}{\faHome \hspace{0.2mm} \website} |
+    \href{mailto:\emaila}{\faEnvelope \hspace{0.2mm} \emaila} | \faPhone \hspace{0.2mm} +971 \phone }
+\end{center}
+\vspace{-3mm}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Birla Institute of Technology and Science}{Dubai, UAE}
+      {Bachelor's of Engineering in Computer Science}{Sep. 2019 -- Aug. 2023}
+    \resumeSubheading
+      {Chettinad Vidyashram}{Tamilnadu, India}
+      {Higher Secondary Education}{Apr. 2017 -- Mar. 2019}
+  \resumeSubHeadingListEnd
+
+
+%-----------Work Experience-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {KPTAC Technologies}{Dubai, UAE}
+      {Software Engineering Intern}{Feb. 2023 - Jul. 2023}
+      \resumeItemListStart
+        \resumeItem{}
+          {Performed Web Scraping of e-commerce data from various websites like Carrefour, LuLu, Waitrose using Scrapy framework, Selenium Web Driver and json extraction from hidden Api clients.}
+        \resumeItem{}
+          {Designed and implemented spiders, item pipelines for automated data extraction, parsing and storing using Scrapy.}
+        \resumeItem{}
+          {Performed data cleaning and preprocessing to ensure accuracy and consistency of scraped data.}
+        \resumeItem{}
+          {Performed Data Analysis on cleaned data using PowerBI, pandas, NumPy, Matplotlib}
+        \resumeItem{}
+          {Worked on medusa.js for headless CMS backend.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+        {Sentient Labs}{Dubai, UAE}
+        {Robotics Engineering Intern}{Jun. 2021 - Aug. 2021}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed a Robot application using ROS in AWS RoboMaker for obstacle avoidance and path planning.}
+        \resumeItem{}
+          {Tested the robot application with Turtlebot in a simulation environment using AWS S3 bucket, Gazebo, Rviz.}
+        \resumeItem{}
+          {Deployed the application to an edge device using AWS Greengrass IOT and established a ROS pipeline using AWS.}
+        \resumeItem{}
+          {Containerized the robot application with Docker for improved portability and scalability.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    
+
+%-----------Research Experience-----------------
+%\section{Research Experience}
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+ \vspace{-0.4mm}
+  \resumeSubHeadingListStart
+    \resumeProject{\textbf{\href{https://github.com/Jkanishkha0305/Multi-model-approach-for-autonomous-driving}{Multi-Model approach for Autonomous Driving}}{\hspace{0.2mm} \faGithub}}
+	{\raisebox{0.75pt}{Dec. 2022}}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed Multiple Deep Learning Models to detect and classify Traffic signals, detect obstacles and detect lanes. }
+        \resumeItem{}
+          {Performed behavioural cloning of self-driving cars in simulated environments using neural networks.}
+        \resumeItem{}
+          {Performed comparative study with different models like Mask-RCNN, ResNet50, InceptionV3 and MobileNet.}
+        \resumeItem{}
+          {Designed a self-driving reinforcement learning model using Deep Q-learning in OpenAI Gym environment.}
+        \resumeItem{}
+          {Built an Autonomous driving vehicle using Jetson Nano, Arduino, Ultrasonic Sensor that can perform Lane Detection, Obstacle Avoidance and response to Traffic Signals using Deep Learning and Image Segmentation.}
+      \resumeItemListEnd
+ 
+    \vspace{-15pt}
+    \resumeProject{\textbf{\href{https://github.com/Jkanishkha0305/Visual-Tracking-of-Mobile-Robots-using-UAV}{Application of DCNN for Visual Tracking of Mobile Robots using UAV}}{\hspace{0.2mm} \faGithub}}
+	{\raisebox{0.75pt}{Dec. 2022}}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed a Deep learning model to detect the mobile robot by training the model with custom datasets.}
+        \resumeItem{}
+          {Performed comparative study with different models like Faster-RCNN, SSD, YOLOv5 and YOLOv7 and chose the best-performing model for deployment into the dji Tello drone.}
+        \resumeItem{}
+          {Used PID controller and OpenCV to autonomously track and follow the mobile robot using dji Tello drone.}
+
+      \resumeItemListEnd
+ 
+    \vspace{-15pt}    
+    \resumeProject{\textbf{\href{https://github.com/Jkanishkha0305/Fetal-Health-prediction-from-CTG-Data-using-Ensemble-learning}{Fetal Health prediction from CTG Data using Ensemble learning}}{\hspace{0.2mm} \faGithub}}
+	{\raisebox{0.75pt}{Sep. 2022}}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed an Ensemble learning model to predict the health of the fetus during pregnancy from CTG data.}
+        \resumeItem{}
+          {Performed ensemble learning through bagging, boosting and majority voting classifiers approaches.}
+        \resumeItem{}
+          {Machine learning models like XGBoost, Adaboost, RandomForest, Decision Tree, Naive Bayes and  SVM were used.}
+        \resumeItem{}
+          {1D-CNN and Hybrid CNN+LSTM models were also developed to perform comparative analysis.}
+      \resumeItemListEnd
+      
+    \vspace{-15pt}    
+	\resumeProject{\textbf{\href{https://github.com/Jkanishkha0305/Detection-of-Covid-19-from-Chest-Xray-using-Custom-CNN-and-Transfer-Learning}{End-to-End Model to detect Covid-19 from Chest X-ray Images}}{\hspace{0.2mm} \faGithub}}
+	{\raisebox{0.75pt}{Mar. 2022}}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed a Hybrid Learning Model using CNN+LSTM to detect Covid-19 from Chest X-Ray images.}
+        \resumeItem{}
+          {Performed comparative study of proposed model with different models like Xception, VGG19, MobileNet.}
+        \resumeItem{}
+          {Developed a web app using HTML, CSS, flask framework and deployed the model in real-time using Heroku.}  
+      \resumeItemListEnd
+ 
+    \vspace{-15pt}
+        
+    %    \resumeProject{\textbf{\href{https://github.com/abxhr/Open-DSA}Open DSA}}
+    \resumeProject{\textbf{\href{https://github.com/Jkanishkha0305/ASL-Detection-system-using-Custom-CNN-and-ML-Techniques}{ASL Detection and translation system using Neural Networks}}{\hspace{0.2mm} \faGithub}}
+	{\raisebox{0.75pt}{Mar. 2022}}
+      \resumeItemListStart
+        \resumeItem{}
+          {Created a Custom CNN model to detect hand gestures using the American Sign Language system and translate it.}
+        \resumeItem{}
+          {Performed comparative study across different machine learning models {SVM, LR, KNN, NB, DT} and custom CNN.}
+        \resumeItem{}
+          {Used the concepts of OpenCV to predict and translate hand gestures from the live video.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-17pt}
+
+
+%-----------Technical Skills-----------------
+\section{Technical Skills}
+\vspace{-0.4mm}
+
+\small{
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\hspace{10pt}Languages \ & Python, C++, C, Java, Matlab  \\
+\hspace{10pt}Web Technologies & HTML, CSS, Django, Flask, medusa.js\\
+\hspace{10pt}ML/AI & TensorFlow, Pytorch, Scikit-learn, OpenCV \\
+\hspace{10pt}Data Analytics & Numpy, Pandas, Matplotlib, Seaborn, Plotly, MySQL\\
+\hspace{10pt}Cloud Platforms & AWS, Azure, GCP \\
+\hspace{10pt}Miscellaneous & Docker, Linux, ROS, Jetson Nano, Arduino, Git, Scrapy\\
+\end{tabular}
+}
+
+\vspace{-2.5mm}
+
+%-----------Relevant Coursework-----------------
+\section{Relevant Coursework}
+
+\small{
+
+{$\bullet$ Data Structures $\bullet$ Foundations of Data Science $\bullet$ Machine Learning $\bullet$ Deep Learning $\bullet$ Artificial Intelligence $\bullet$ Data Mining $\bullet$ Neural Networks \& Fuzzy Logic $\bullet$ Design \& Analysis of Algorithms $\bullet$ Operating Systems  $\bullet$ Compiler Construction $\bullet$ Database Systems $\bullet$ Theory of Computation $\bullet$ Computer Networks $\bullet$ Object Oriented Programming $\bullet$ Discrete Structures $\bullet$ Logic in Computer Science $\bullet$ Computer Architecture $\bullet$ Principles of Programming Languages }\\
+
+}
+
+\vspace{-2.5mm}
+
+%-----------Achievements-----------------
+\section{Achievements}
+
+\vspace{1mm}
+
+\small{
+    {$\bullet$ Winners of \textit{Dubai World Police Summit 2023} Drone Challenge\textit{, UAE}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Shortlisted for finals of the\textit{ Emirates Robotics Competition 2023, Dubai Future Foundation, UAE}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Shortlisted for top 20 finalists all over Arab nations in the\textit{ ITAS Arab Youth Competition 2023, Qatar}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Winners of \textit{PIED CEL's Desert Hack Startup Competition    2022}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Winners of \textit{ACM BPDC’s Capture The Flag (CTF) Competition 2020}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Runner-up of \textit{MTC BPDC’s CodeBlitz Competition 2020}.}\\
+    \vspace{0.5mm}
+    {$\bullet$ Received Academic Scholarship for scoring \textit{9+ GPA in continuous semesters}.}\\
+} 
+
+\vspace{-1mm}
+
+%-----------Publications-----------------
+\section{Publications}
+
+\vspace{1mm}
+
+\small{
+	\textbf{"Classification of Microstructure Images of Metals Using Transfer Learning"}.\textit{MDIS 2022 8th International Conference, Sibiu, Romania, Springer 2022. (Published) \href{https://doi.org/10.1007/978-3-031-27034-5_9}{doi: 10.1007/978-3-031-27034-5}}\\
+    \vspace{1mm}
+    \textbf{"An End-to-End Hybrid Learning model for detection of Covid-19 from Chest X-ray images"}.\textit{Alliance Technology Conference-1-International Conference on Artificial Intelligence and Applications-2023, Bengaluru, India. (Accepted)}\\
+    \vspace{1mm}
+    \textbf{"Multi-model approach for autonomous driving: A comprehensive study on traffic sign detection, vehicle detection, lane detection, and deep learning in Udacity Self-Driving Car Simulator"}.\textit{Multimedia Tools and Applications, An International Journal, Springer 2023. (Under Review)}\\
+    
+}
+\vspace{-1.5mm}
+
+%-----------Leadership-----------------
+\section{Leadership}
+
+\vspace{0.5mm}
+
+\vspace{-15pt}
+\begin{multicols}{3}
+	\begin{itemize}
+		\resumeLeadership{President}{Aug. 2022 - Present}{IEI BPDC Student Chapter}
+		\resumeLeadership{Team Lead}{Jun. 2022 – Present}{Team IFOR and Robotrix}
+        \resumeLeadership{Events Executive}{Aug. 2022 - Present}{Flummoxed Quizzing Club}
+        \resumeLeadership{Assistant Vice Captain}{Sep. 2022 - Present}{University Cricket Team}
+		\resumeLeadership{Technical Executive}{Aug. 2021 - Aug. 2022}{Microsoft Tech Club, BPDC}
+		\resumeLeadership{Treasurer}{Aug. 2021 - Jun. 2022}{Flummoxed Quizzing Club}
+	\end{itemize}
+\end{multicols}
+
+\vspace{-3.5mm}
+%-----------Volunteering-----------------
+\section{Volunteering}
+
+%\vspace{0.2mm}
+
+\small{
+{$\bullet$ Conducted a Hands-on Robotics Workshop on \textit{Arduino, Tinkercad, Microcontrollers, Sensors} and guided the students and faculties to build an \textit{Obstacle Avoidance Robocar} .}\\
+{$\bullet$ Conducted a Machine Learning Bootcamp, for high school students during the university STEM event 2021-22.}\\
+{$\bullet$ Conducted a 2-day Hands-on Coding Workshop on \textit{HTML, CSS, Javascript, GitHub Basics for university students} .}\\
+{$\bullet$ Event Manager for \textit{University Cricket Tournament, University Quiz Fests, STEM event, Spectrum-2022}.}\\
+}
+
+\vspace{-2.5mm}
+
+%-----------Certifications----------------
+\section{Certifications}
+
+\vspace{-15pt}
+\begin{multicols}{3}
+	\begin{itemize}
+        \resumeLeadership{\href{https://drive.google.com/file/d/1Ie8h6SQCB01rqpMTPAhcZeSxWbhWZ_kK/view?usp=sharing}{Self-Driving Cars Specialization}}{Issued April 2023}{University of Toronto}    \resumeLeadership{\href{https://drive.google.com/file/d/1ntkqytBIRZEXqgHdYQNZMGp1nE3WO55d/view?usp=sharing}{Deep Learning Specialization}}{Issued March 2023}{DeepLearning.AI} \resumeLeadership{\href{https://drive.google.com/file/d/1YZUAKlISMpajxgVp9BG4QAlyjjT0asmS/view?usp=sharing}{Machine Learning Specialization}}{Issued March 2023}{DeepLearning.AI}	\resumeLeadership{\href{https://drive.google.com/file/d/1SjB08sBkOdnVYhFSPnfVwaZvxJDHKTAR/view?usp=sharing}{IBM Data Science Professional}}{Issued September 2022}{IBM} \resumeLeadership{\href{https://drive.google.com/file/d/190uxeWvmM_IX0r2WzYTZ6nSd4hX1L9VZ/view?usp=sharing}{Google Data Analytics Professional}}{Issued August 2022}{Google}
+	\end{itemize}
+\end{multicols}
+
+%-----------Miscellanous-----------------
+\section{Miscellaneous}
+
+\small{
+	\textbf{Co-Curricular activities: }{Robotics, Competitive Coding, Cricket, Quizzing, Finance and Investments, Painting, Football. }\\
+    \textbf{Languages: }{English, Hindi, Tamil, Telugu, German}\\
+}
+\end{document}
